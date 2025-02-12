@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Poor+Story&family=Rubik+Bubbles&family=Tajawal:wght@200&display=swap"
+        rel="stylesheet">
+    <title>Womens Fashion</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        header {
+            width: 100%;
+            height: 10vh;
+            color: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: grey;
+        }
+
+        header h2 {
+            margin-left: 40px;
+            font-family: 'Rubik Bubbles', cursive;
+        }
+        h2 a{
+            color: white;
+            padding: 0 20px 0 0;
+        }
+        #product_page {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #product1_page {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #img {
+            width: 500px;
+            position: relative;
+            top: -100px;
+        }
+
+        #first_img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            padding: 5px;
+            border: 2px solid grey;
+        }
+
+        #img2 img {
+            width: 120px;
+            height: 100px;
+            object-fit: cover;
+            padding: 5px;
+            margin: 5px;
+            border: 2px solid grey;
+            cursor: pointer;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            padding: 15px 20px;
+            width: 200px;
+            margin-top: 10px;
+        }
+
+        button a {
+            color: white;
+            letter-spacing: 3px;
+        }
+
+        .button1 {
+            background-color: rgb(47, 44, 44);
+        }
+
+        .button1:hover {
+            background-color: rgb(65, 57, 57);
+        }
+
+        .button2 {
+            background-color: blueviolet;
+        }
+
+        .button2:hover {
+            background-color: rgb(101, 30, 167);
+        }
+
+        #product_description {
+            width: 700px;
+            margin-top: 50px;
+        }
+
+        #product_description h2,
+        h5 {
+            color: grey;
+            font-size: 15px;
+        }
+
+        #product_description h1,
+        h3 {
+            font-size: 30px;
+        }
+        #product_description h3 i{
+            font-size: 27px;
+            padding: 2px;
+        }
+        #size h4 {
+            font-size: 20px;
+            margin: 20px 0 10px 0;
+        }
+
+        #size li {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-left: 7px;
+            border: 1px solid black;
+        }
+
+        #size li a {
+            color: black;
+        }
+        #colour li{
+            display: inline-block;
+            margin-top: 10px;
+        } 
+        #colour h3{
+            font-size: 20px;
+            margin: 20px 0 10px 0;
+        }
+        #colour img{
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        #colour img:hover{
+            padding: 2px;
+            border: 1px solid black;
+        }
+        #Material {
+            font-size: 18px;
+            margin: 30px 0 30px 0;
+            color: rgb(60, 53, 53);
+            line-height: 30px;
+        }
+
+        #product h3 {
+            font-size: 18px;
+            display: inline;
+            color: rgb(44, 41, 41);
+        }
+
+        #product {
+            margin-bottom: 50px;
+        }
+
+        #product h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #product li {
+            color: rgb(70, 67, 67);
+            line-height: 30px;
+        }
+
+        #comments {
+            width: 100%;
+            height: 50vh;
+        }
+
+        #comments h1 {
+            font-size: 30px;
+            font-style: oblique;
+            color: rgb(101, 94, 94);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0 30px 0;
+        }
+
+        .comment1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .comment {
+            width: 300px;
+            margin-left: 40px;
+            background-color: grey;
+            border-bottom-left-radius: 30px;
+            border-top-right-radius: 30px;
+            padding: 40px;
+            position: relative;
+            color: white;
+        }
+
+        .comment h4 {
+            display: inline-block;
+            position: absolute;
+            left: 100px;
+            top: 60px;
+        }
+
+        .comment img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .comment p {
+            color: rgb(217, 204, 204);
+            margin-top: 10px;
+            font-size: 17px;
+        }
+
+        #more_product {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #more_product img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .more {
+            width: 250px;
+            height: 450px;
+            text-align: center;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .more h6 {
+            font-size: 17px;
+            margin: 5px 0 3px 0;
+            color: black;
+        }
+
+        .more p {
+            font-size: 19px;
+            color: black;
+        }
+
+        .more h5 {
+            margin-top: 5px;
+        }
+
+        .more i {
+            cursor: none;
+            color: orange;
+        }
+
+        #form {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(200, 199, 199);
+        }
+
+        form {
+            width: 400px;
+        }
+
+        form label {
+            display: block;
+            font-size: 18px;
+            color: rgb(75, 75, 75);
+            margin: 5px 0 5px 0;
+        }
+
+        form input,
+        textarea {
+            padding: 5px;
+            outline: none;
+            border: 1px solid black;
+            background-color: transparent;
+            width: 300px;
+            font-size: 17px;
+        }
+
+        form button {
+            background-color: blueviolet;
+            color: white;
+            letter-spacing: 3px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: rgb(64, 5, 119);
+            letter-spacing: 6px;
+        }
+
+        #form_img {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(81, 77, 77);
+            position: relative;
+        }
+
+        #form_img img {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            bottom: -10px;
+            left: -10px;
+        }
+
+        footer {
+            width: 100%;
+            height: 20vh;
+            background-color: rgb(26, 3, 84);
+        }
+
+        #footer {
+            width: 100%;
+            height: 50vh;
+            background-color: rgb(2, 2, 79);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+
+        #footer div {
+            margin-right: 80px;
+        }
+
+        #footer h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        #footer p {
+            font-size: 17px;
+            color: grey;
+            display: inline-block;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+
+        #address h4 {
+            font-size: 20px;
+            margin: 10px 0 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2><a href="Womens_total.html"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>KK FASHIONS</h2>
+    </header>
+    <div id="product_page">
+        <div id="product1_page">
+            <div id="img">
+                <img src="pp.png" id="first_img">
+                <div id="img2">
+                    <img src="pp1.png" id="pp">
+                    <img src="pp2.png" id="pp1">
+                    <img src="pp3.png" id="pp2">
+                </div>
+                <div id="buttons">
+                    <button class="button1"><a href="#">ADD TO CARD</a></button>
+                    <button class="button2"><a href="#">BUY NOW</a></button>
+                </div>
+            </div>
+            <div id="product_description">
+                <h2>BATA COLLECTIONS</h2>
+                <h1>WOMENS KURTHA BLACK COLOR (PACK OF 2)</h1>
+                <h5>Special offer</h5>
+                <h3><i class="fa fa-inr" aria-hidden="true"></i>375</h3>
+                <ul id="size">
+                    <h4>Size <i class="fa fa-caret-down" aria-hidden="true"></i></h4>
+                    <li><a href="#">S</a></li>
+                    <li><a href="#">L</a></li>
+                    <li><a href="#">XL</a></li>
+                    <li><a href="#">XXL</a></li>
+                </ul>
+                <ul id="colour">
+                    <h3>Colour <i class="fa fa-caret-down" aria-hidden="true"></i></h3>
+                    <li><img src="about.jpg"></li>
+                    <li><img src="collection2.jpg"></li>
+                    <li><img src="collections1.jpg"></li>
+                    <li><img src="pic1.png"></li>
+                    <li><img src="pp.png"></li>
+                    <li><img src="pp1.png"></li>
+                    <li><img src="pp2.png"></li>
+                </ul>
+                <ul id="Material">
+                    <li>Care Instruction : machine wash</li>
+                    <li>Fit Type : Regular</li>
+                    <li>Colour : Black ; Fabric </li>
+                    <li>Kurtha length : 45Inch , Bust Size : 36Inch , Sleeve Length : 17Inch</li>
+                    <li>Material Composition:100% Rayon</li>
+                    <li>Material Composition:50% Fabrics</li>
+                </ul>
+                <ul id="product">
+                    <h4>PRODUCT DISCRIPTION</h4>
+                    <li>
+                        <h3>Package Dimension :</h3> 28*23.7
+                    </li>
+                    <li>
+                        <h3>Date First Available :</h3> 22 December 2020
+                    </li>
+                    <li>
+                        <h3>Manufacture :</h3>siril
+                    </li>
+                    <li>
+                        <h3>item weight :</h3>250g
+                    </li>
+                    <li>
+                        <h3>Included Component :</h3>kurtha
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="comments">
+        <h1>CUSTOMER COMMENTS</h1>
+        <div class="comment1">
+            <div class="comment">
+                <h4>KESAVARAJ</h4>
+                <img src="comment.png">
+                <p>Lorem ipsum dolor sit Ducimus, voluptatem enim consequatur nihil recusandae repellendus omnis
+                    consectetur</p>
+            </div>
+            <div class="comment">
+                <h4>KAAVYAA</h4>
+                <img src="comment.png">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dicta enim doloremque. Tenetur quidem
+                    quaerat</p>
+            </div>
+            <div class="comment">
+                <h4>MEENAMBAL</h4>
+                <img src="comment.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo in iusto, cum nisi recusandae
+                    voluptatibus</p>
+            </div>
+        </div>
+    </div>
+    <section id="more_product">
+        <div class="more">
+            <a href="#"><img src="collection2.jpg">
+                <h5>Sponsered By</h5>
+                <h6>Aditiya</h5>
+                    <p>Annabella Collection of child Fashion</p>
+                    <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i
+                        class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i
+                        class="fa fa-star" aria-hidden="true"></i>
+                    <h5>Listed of 5 Days ago</h5>
+            </a>
+        </div>
+        <div class="more">
+            <a href="#"><img src="collections1.jpg">
+                <h5>Sponsered By</h5>
+                <h6>Karthikeyan</h6>
+                <p>Womens gorgeous Collection of White Tops</p>
+                <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                <h5>Listed of 3 Days ago</h5>
+            </a>
+        </div>
+        <div class="more">
+            <a href="#"><img src="pic1.png">
+                <h5>Sponsered By</h5>
+                <h6>Varatharaj</h6>
+                <p>Womens gorgeous collection of Red Tops</p>
+                <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i>
+                <h5>Listed of 1 Days ago</h5>
+            </a>
+        </div>
+        <div class="more">
+            <a href="#"><img src="project3.png">
+                <h5>Sponsered By</h5>
+                <h6>SriRangan</h6>
+                <p>Womens gorgeous collection of Jeans Shirt</p>
+                <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i>
+                <h5>Listed of 8 Days ago</h5>
+            </a>
+        </div>
+        <div class="more">
+            <a href="#"><img src="pp1.png">
+                <h5>Sponsered By</h5>
+                <h6>Kavya</h6>
+                <p>Womens gorgeous collection of net Dress</p><i class="fa fa-star-o" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                <h5>Listed of 6 Days ago</h5>
+            </a>
+        </div>
+        <div class="more">
+            <a href="#"><img src="about.jpg">
+                <h5>Sponsered By</h5>
+                <h6>Meenambal</h6>
+                <p> Womens gorgeous Collection of blue Dress</p>
+                <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i
+                    class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i
+                    class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                <h5>Listed of 1 Days ago</h5>
+            </a>
+        </div>
+        <div class="more">
+            <a href="#"><img src="collections.jpg">
+                <h5>Sponsered By</h5>
+                <h6>Kesavaraj</h6>
+                <p>MEns gorgeous collection of Coat Dress</p>
+                <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i
+                    class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i>
+                <h5>Listed of 2 Days ago</h5>
+            </a>
+        </div>
+        <div class="more">
+            <a href="#"><img src="pic3.png">
+                <h5>Sponsered By</h5>
+                <h6>Ganeshwari</h6>
+                <p>Branded Shirt for Boys Fashion</p>
+                <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i>
+                <h5>Listed of 10 Days ago</h5>
+            </a>
+        </div>
+        <div class="more">
+            <a href="#"><img src="pic6.png">
+                <h5>Sponsered By</h5>
+                <h6>Krishnaraj</h6>
+                <p>Womens Branded WATCH Green Colour</p>
+                <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i>
+                <h5>Listed of 20 Days ago</h5>
+            </a>
+        </div>
+        <div class="more">
+            <a href="#"><img src="pic7.png">
+                <h5>Sponsered By</h5>
+                <h6>Saravana</h6>
+                <p>Mens Branded SmartWatch </p>
+                <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i
+                    class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
+                    class="fa fa-star" aria-hidden="true"></i>
+                <h5>Listed of 15 Days ago</h5>
+            </a>
+        </div>
+    </section>
+    <section id="form">
+        <form>
+            <div>
+                <div>
+                    <label>NAME : </label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>MOBILE NO :</label>
+                    <input type="number">
+                </div>
+                <div>
+                    <label>COMMENTS :</label>
+                    <textarea rows="5"></textarea>
+                </div>
+            </div>
+            <button>SUBMIT</button>
+        </form>
+        <div id="form_img">
+            <img src="pic8.png" alt="">
+        </div>
+    </section>
+    <section id="footer">
+        <div>
+            <h3>OUR SERVICES</h3>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Domain Name</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Shared Web Hosting</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Reseller Web Hosting</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>SSL certificate</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Web Designing</p>
+        </div>
+        <div>
+            <h3>HELP & SUPPORT</h3>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Domain Name</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Shared Web Hosting</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Reseller Web Hosting</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>SSL certificate</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Web Designing</p><br>
+        </div>
+        <div>
+            <h3>AFFILIATES</h3>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Domain Name</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Shared Web Hosting</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>SSL certificate</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Reseller Web Hosting</p><br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <p>Web Designing</p><br>
+        </div>
+        <div id="address">
+            <h4>ADDRESS</h4>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <p>48,Thirugnanam nagar Salem - 636006</p>
+            <h4>Have Any Questions ?</h4>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <p>kaavyaakavi15@gmail.com</p>
+            <h4>CONTACT US</h4>
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <P>9087654321</P>
+        </div>
+
+    </section>
+</body>
+<script>
+    const img = document.getElementById("first_img");
+    const pp = document.getElementById("pp");
+    const pp1 = document.getElementById("pp1");
+    const pp2 = document.getElementById("pp2");
+
+    pp.addEventListener("click", function () {
+        if (img.src.match("pp")) {
+            img.src = "pp1.png"
+        }
+        // else {
+        //     img.src = "pp1.png"
+        // }
+    })
+
+    pp1.addEventListener("click", function () {
+        if (img.src.match("pp")) {
+            img.src = "pp2.png"
+        }
+        // else {
+        //     img.src = "pp2.png"
+        // }
+    })
+
+    pp2.addEventListener("click", function () {
+        if (img.src.match("pp")) {
+            img.src = "pp3.png"
+        }
+        // else {
+        //     img.src = "pp3.png"
+        // }
+    })
+</script>
+
+</html>
